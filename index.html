@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rivora - Luxury Hotel Booking HTML Template</title>
+    <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="" name="author">
+    <!-- CSS Files
+    ================================================== -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper-custom-1.css" rel="stylesheet" type="text/css">
+    <link href="css/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/coloring.css" rel="stylesheet" type="text/css">
+    <!-- color scheme -->
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <header class="header-light transparent">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="de-flex">
+                        <div class="de-flex-col">
+                            <!-- logo begin -->
+                            <div id="logo">
+                                <a href="index.html">
+                                    <img class="logo-main" src="images/logo-black.webp" alt="">
+                                    <img class="logo-scroll" src="images/logo-black.webp" alt="">
+                                    <img class="logo-mobile" src="images/logo-black.webp" alt="">
+                                </a>
+                            </div>
+                            <!-- logo close -->
+                        </div>
+
+                        <div class="de-flex-col">
+                            <div class="de-flex-col header-col-mid">
+                                <ul id="mainmenu">
+                                    <li><a class="menu-item" href="index.html">Home</a>
+                                    </li>
+                                    <li><a class="menu-item" href="about.html">About Us</a></li>
+
+                                    <li><a class="menu-item" href="rooms.html">Rooms</a>
+                                    </li>
+                                    <li><a class="menu-item" href="blog.html">Blog</a></li>
+                                    <li><a class="menu-item" href="contact.html">Contact</a></li>
+
+                                    <li><a class="menu-item" href="#">Others</a>
+                                        <ul>
+                                            <li><a class="menu-item" href="facilities.html">Facilities</a></li>
+                                            <li><a class="menu-item" href="gallery.html">Gallery</a></li>
+                                            <li><a class="menu-item" href="testimonials.html">Testimonials</a></li>
+                                            <li><a class="menu-item" href="offers.html">Offers</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="de-flex-col">
+                            <div class="menu_side_area">
+                                <a href="reservation.html"
+                                    class="btn-main fx-slide hover-white"><span>Reservation</span></a>
+                                <span id="menu-btn"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <a href="#" id="back-to-top"></a>
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+        <!-- page preloader close -->
+
+        <section class="no-top no-bottom relative rounded-1 overflow-hidden mt-80 mt-sm-50 mx-2">
+            <div class="mh-800">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide text-light">
+                            <div class="swiper-inner" data-bgimage="url(images/slider/1.webp)">
+                                <div class="sw-caption">
+                                    <div class="container">
+                                        <div class="row gx-5 align-items-center justify-content-center">
+                                            <div class="col-lg-8">
+                                                <div class="sw-text-wrapper text-center">
+                                                    <h1 class="wow anim-order-1">
+                                                        Experience Comfort, Style, and Luxury in Every Stay
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="wow anim-order-2 text-center">
+                                                    <div class="bg-blur rounded-1 p-4">
+                                                        <p class="text-white mb-0">
+                                                            From elegant rooms to personalized services, our hotel
+                                                            delivers a relaxing stay designed for comfort, convenience,
+                                                            and unforgettable moments.
+                                                        </p>
+                                                    </div>
+                                                    <div class="spacer-double"></div>
+                                                    <div class="spacer-double"></div>
+                                                    <div class="spacer-double"></div>
+                                                    <div class="spacer-single"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sw-overlay op-4"></div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide text-light">
+                            <div class="swiper-inner" data-bgimage="url(images/slider/2.webp)">
+                                <div class="sw-caption">
+                                    <div class="container">
+                                        <div class="row gx-5 align-items-center justify-content-center">
+                                            <div class="col-lg-8">
+                                                <div class="sw-text-wrapper text-center">
+                                                    <h1 class="wow anim-order-1">
+                                                        Where Thoughtful Design Meets Exceptional Hospitality
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="wow anim-order-2 text-center">
+                                                    <div class="bg-blur rounded-1 p-4">
+                                                        <p class="text-white mb-0">
+                                                            Enjoy carefully crafted spaces, modern amenities, and
+                                                            attentive service that transform every visit into a truly
+                                                            memorable experience.
+                                                        </p>
+                                                    </div>
+                                                    <div class="spacer-double"></div>
+                                                    <div class="spacer-double"></div>
+                                                    <div class="spacer-double"></div>
+                                                    <div class="spacer-single"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sw-overlay op-4"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+
+                <div class="abs w-100 bottom-0 z-2 mb-5 sm-hide">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="bg-default p-40 rounded-1">
+                                    <form name="contactForm" id="contact_form" method="post" action="#">
+                                        <div class="row g-4 align-items-end">
+
+                                            <div class="col-md-1-5">
+                                                <div class="tefs-18 text-dark fw-500 mb-10">Check In</div>
+                                                <input type="text" id="checkin" class="form-control" required>
+                                            </div>
+
+                                            <div class="col-md-1-5">
+                                                <div class="tefs-18 text-dark fw-500 mb-10">Check Out</div>
+                                                <input type="text" id="checkout" class="form-control" required>
+                                            </div>
+
+                                            <div class="col-md-1-5">
+                                                <div class="tefs-18 text-dark fw-500 mb-10">Rooms</div>
+                                                <select name="rooms" id="rooms" class="form-control">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-1-5">
+                                                <div class="tefs-18 text-dark fw-500 mb-10">Guests</div>
+                                                <select name="guests" id="guests" class="form-control">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                </select>
+                                            </div>
+
+
+                                            <div class="col-md-1-5">
+                                                <div id='submit'>
+                                                    <input type='submit' id='send_message' value='Check Availability'
+                                                        class="btn-main w-100">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section>
+            <div class="container">
+
+                <div class="row g-4 mb-4 justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <div class="subtitle mb-0 id-color wow fadeInUp" data-wow-delay=".0s">Enjoy Your Stay</div>
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s">Explore Room</h2>
+                        <p class="cwow fadeInUp" data-wow-delay=".4s">
+                            Discover a curated selection of elegant rooms designed for comfort. From cozy spaces to
+                            refined suites, every detail is crafted for a relaxing stay.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Standard Room -->
+                    <div class="room-item hover p-2 rounded-1 bg-white mb-4">
+                        <div class="row g-5 align-items-center">
+                            <div class="col-md-4">
+                                <a href="room-single.html" class="d-block hover relative">
+                                    <div class="rounded-1 overflow-hidden">
+                                        <img src="images/rooms/1.webp" class="w-100 hover-scale-1-2" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="p-4">
+                                    <div class="row justify-content-between">
+                                        <div class="col-md-6">
+                                            <h3 class="m-0">Standard Room</h3>
+                                            <span class="d-stars id-color d-block">
+                                                <i class="icofont-star"></i><i class="icofont-star"></i>
+                                                <i class="icofont-star"></i><i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                                            <p class="pb-0">
+                                                Elegant and cozy room designed for comfort and relaxation, featuring
+                                                tasteful interiors and a warm, inviting atmosphere.
+                                            </p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="fs-15">
+                                                <div class="d-flex align-items-center mb-1">
+                                                    <img src="images/ui/user.webp" class="w-15px me-2" alt="">2 guests
+                                                </div>
+                                                <div class="d-flex align-items-center mb-1">
+                                                    <img src="images/ui/floorplan.webp" class="w-15px me-2" alt="">28 ft
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="fs-24 fw-bold mb-0 me-1">$109</div><span>/night</span>
+                                                </div>
+                                                <div class="spacer-single"></div>
+                                                <a href="room-single.html"
+                                                    class="btn-main fx-slide hover-white"><span>Select Room</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Superior Room -->
+                    <div class="room-item hover p-2 rounded-1 bg-white mb-4">
+                        <div class="row g-5 align-items-center">
+                            <div class="col-md-4">
+                                <a href="room-single.html" class="d-block hover relative">
+                                    <div class="rounded-1 overflow-hidden position-relative">
+                                        <span
+                                            class="abs bg-color text-white fs-14 p-2 px-3 m-3 rounded-3 top-0 start-0 z-3">
+                                            Best Selling
+                                        </span>
+                                        <img src="images/rooms/2.webp" class="w-100 hover-scale-1-2" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="p-4">
+                                    <div class="row justify-content-between">
+                                        <div class="col-md-6">
+                                            <h3 class="m-0">Superior Room</h3>
+                                            <span class="d-stars id-color d-block">
+                                                <i class="icofont-star"></i><i class="icofont-star"></i>
+                                                <i class="icofont-star"></i><i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                                            <p class="pb-0">
+                                                Refined space with premium amenities and modern design, offering
+                                                enhanced comfort for a more enjoyable stay.
+                                            </p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="fs-15">
+                                                <div class="d-flex align-items-center mb-1">
+                                                    <img src="images/ui/user.webp" class="w-15px me-2" alt="">2 guests
+                                                </div>
+                                                <div class="d-flex align-items-center mb-1">
+                                                    <img src="images/ui/floorplan.webp" class="w-15px me-2" alt="">28 ft
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="fs-24 fw-bold mb-0 me-1">$129</div><span>/night</span>
+                                                </div>
+                                                <div class="spacer-single"></div>
+                                                <a href="room-single.html"
+                                                    class="btn-main fx-slide hover-white"><span>Select Room</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+        <section class="text-light jarallax mx-2 rounded-1 overflow-hidden">
+            <img src="images/background/kaduhithlu-testimonial-parallex.webp" class="jarallax-img" alt="">
+            <div class="sw-overlay op-6"></div>
+            <div class="container relative z-2">
+                <div class="row g-4 gx-5 align-items-center">
+                    <div class="col-lg-5 text-center">
+                        <h2 class="fs-96 mb-0">4.9</h2>
+                        <span class="d-stars id-color d-block wow fadeInUp">
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                        </span>
+                        (330+ Reviews)
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="owl-single-dots owl-carousel owl-theme">
+
+                            <div class="item">
+                                <span class="d-stars id-color d-block mb-3">
+                                    <i class="icofont-star"></i><i class="icofont-star"></i><i
+                                        class="icofont-star"></i><i class="icofont-star"></i><i
+                                        class="icofont-star"></i>
+                                </span>
+                                <h3 class="mb-4 wow fadeInUp fs-30">It was really a pleasant stay at the resort. Food was really delicious, rooms were well maintained and hygiene. Overall the location, hospitality, food etc etc every thing was awesome. Enjoyed the stay, really a pleasant place to stay and get relaxed.</h3>
+                                <span class="wow fadeInUp">Gopi Krishna</span>
+                            </div>
+
+                            <div class="item">
+                                <span class="d-stars id-color d-block mb-3">
+                                    <i class="icofont-star"></i><i class="icofont-star"></i><i
+                                        class="icofont-star"></i><i class="icofont-star"></i><i
+                                        class="icofont-star"></i>
+                                </span>
+                                <h3 class="mb-4 wow fadeInUp fs-30">A beautiful retreat surrounded by nature with charming hill (coffee estates) view cottages, tent houses by a gentle running stream, great food, and a peaceful ambience. An ideal spot for a relaxing weekend getaway</h3>
+                                <span class="wow fadeInUp">Niranjan</span>
+                            </div>
+
+                            <div class="item">
+                                <span class="d-stars id-color d-block mb-3">
+                                    <i class="icofont-star"></i><i class="icofont-star"></i><i
+                                        class="icofont-star"></i><i class="icofont-star"></i><i
+                                        class="icofont-star"></i>
+                                </span>
+                                <h3 class="mb-4 wow fadeInUp fs-30">Resort and the place is excellent. Staff was very helpful. Good for family and friends even for office outing.</h3>
+                                <span class="wow fadeInUp">Pavan Dhaulagar</span>
+                            </div>
+
+                            <div class="item">
+                                <span class="d-stars id-color d-block mb-3">
+                                    <i class="icofont-star"></i><i class="icofont-star"></i><i
+                                        class="icofont-star"></i><i class="icofont-star"></i><i
+                                        class="icofont-star"></i>
+                                </span>
+                                <h3 class="mb-4 wow fadeInUp fs-30">Had a great experience with this resort, really a breathtaking view where you can enjoy peace and calm. Especially the staff were so friendly and helped all the time without hesitation. I can definitely refer this place to go and enjoy.</h3>
+                                <span class="wow fadeInUp">Anu Gowda</span>
+                            </div>
+
+                            <div class="item">
+                                <span class="d-stars id-color d-block mb-3">
+                                    <i class="icofont-star"></i><i class="icofont-star"></i><i
+                                        class="icofont-star"></i><i class="icofont-star"></i><i
+                                        class="icofont-star"></i>
+                                </span>
+                                <h3 class="mb-4 wow fadeInUp fs-30">This place is very beautiful, surrounded by greenery. There is a small pond within the property, which makes it even more enjoyable. The staff were very courteous. There's hardly any network here, and also no shops. The food was very tasty.</h3>
+                                <span class="wow fadeInUp">Ankith Shetty</span>
+                            </div>
+
+                            <div class="item">
+                                <span class="d-stars id-color d-block mb-3">
+                                    <i class="icofont-star"></i><i class="icofont-star"></i><i
+                                        class="icofont-star"></i><i class="icofont-star"></i><i
+                                        class="icofont-star"></i>
+                                </span>
+                                <h3 class="mb-4 wow fadeInUp fs-30">Kaduhithlu Resort was absolutely amazing. My cottage was very comfortable and i had a amazing stay. The Resort helped me relax and unwind from all my stress. The dining experience was top notch. If you're looking for a getaway Kaduhithlu Resort is definitely the best place to be.</h3>
+                                <span class="wow fadeInUp">Jai Ranka</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="container">
+                <div class="row g-4 mb-4 justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <div class="subtitle id-color wow fadeInUp" data-wow-delay=".0s">Welcome to GrandStay</div>
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s">Hotel Facilities</h2>
+                        <p class="cwow fadeInUp" data-wow-delay=".4s">
+                            From premium rooms to full-service amenities, our team ensures a comfortable and memorable
+                            stay from check-in to check-out.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="h-100 rounded-1 mh-300 wow fadeInUp" data-bgimage="url(images/misc/kaduhithlu-hotel-facilities-img-1.webp) center">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="row g-4">
+
+                            <!-- TOTAL ROOMS -->
+                            <div class="col-md-6 wow fadeInUp" data-wow-delay=".0s">
+                                <div class="p-30 bg-white rounded-1 h-100">
+                                    <small class="text-uppercase border-bottom d-block">TOTAL ROOMS</small>
+                                    <div class="sm-hide spacer-double"></div>
+                                    <div class="spacer-double"></div>
+                                    <h2 class="mb-0">
+                                        <span class="timer" data-to="180" data-speed="3000">0</span>
+                                        <span class="id-color">+</span>
+                                    </h2>
+                                    luxury rooms & suites
+                                </div>
+                            </div>
+
+                            <!-- YEARLY VISITORS -->
+                            <div class="col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                                <div class="p-30 bg-white rounded-1 h-100">
+                                    <small class="text-uppercase border-bottom d-block">YEARLY VISITORS</small>
+                                    <div class="sm-hide spacer-double"></div>
+                                    <div class="spacer-double"></div>
+                                    <h2 class="mb-0">
+                                        <span class="timer" data-to="8500" data-speed="3000">0</span>
+                                        <span class="id-color">+</span>
+                                    </h2>
+                                    happy guests
+                                </div>
+                            </div>
+
+                            <!-- RESTAURANT MENU ITEMS -->
+                            <div class="col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                                <div class="p-30 bg-white rounded-1 h-100">
+                                    <small class="text-uppercase border-bottom d-block">SIGNATURE MENU</small>
+                                    <div class="sm-hide spacer-double"></div>
+                                    <div class="spacer-double"></div>
+                                    <h2 class="mb-0">
+                                        <span class="timer" data-to="65" data-speed="3000">0</span>
+                                        <span class="id-color">+</span>
+                                    </h2>
+                                    curated dishes & beverages
+                                </div>
+                            </div>
+
+                            <!-- STAFF COUNT / SERVICE IMAGE -->
+                            <div class="col-md-6 wow fadeInUp sm-hide d-md-block d-xs-none" data-wow-delay=".6s">
+                                <div class="p-30 bg-dark-2 rounded-1 h-100"
+                                    data-bgimage="url(images/misc/kaduhithlu-hotel-facilities-img-2.webp) center">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <div class="container">
+            <div class="row g-4 mb-2 justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <div class="subtitle id-color wow fadeInUp">Exclusive Deals</div>
+                    <h2 class="wow fadeInUp" data-wow-delay=".2s">Latest Hotel Offers</h2>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="overflow-hidden rounded-1">
+                        <div class="hover relative">
+                            <h3 class="abs bg-color rounded-3 text-white fs-20 lh-1 p-2 px-3 m-4 top-0 start-0 z-3">20%
+                                OFF</h3>
+                            <img src="images/offers/1.webp" class="w-100 hover-scale-1-1" alt="">
+                            <a href="offer-single.html" class="d-block abs w-100 h-100 top-0 start-0"></a>
+                        </div>
+                        <div class="p-40 bg-dark-2 text-light relative">
+                            <a class="text-white" href="offers.html">
+                                <h3>Romantic Stay</h3>
+                                <p>20% Off Weekend Packages</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="overflow-hidden rounded-1">
+                        <div class="p-40 bg-dark-2 text-light relative">
+                            <a class="text-white" href="offers.html">
+                                <h3>Early Bird Deal</h3>
+                                <p>Save Up to 30% on Rooms</p>
+                            </a>
+                        </div>
+                        <div class="hover relative">
+                            <h3 class="abs bg-color rounded-3 text-white fs-20 lh-1 p-2 px-3 m-4 bottom-0 start-0 z-3">
+                                30% OFF</h3>
+                            <img src="images/offers/2.webp" class="w-100 hover-scale-1-1" alt="">
+                            <a href="offer-single.html" class="d-block abs w-100 h-100 top-0 start-0"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay=".6s">
+                    <div class="overflow-hidden rounded-1">
+                        <div class="hover relative">
+                            <img src="images/offers/3.webp" class="w-100 hover-scale-1-1" alt="">
+                            <a href="offer-single.html" class="d-block abs w-100 h-100 top-0 start-0"></a>
+                        </div>
+                        <div class="p-40 bg-dark-2 text-light relative">
+                            <a class="text-white" href="offers.html">
+                                <h3>Family Getaway</h3>
+                                <p>Kids Stay & Eat Free</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <section>
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="subtitle id-color">FAQ</div>
+                        <h2 class="split">
+                            Everything You Need to Know About Staying With Us
+                        </h2>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="accordion title-boxed wow fadeInUp">
+                            <div class="accordion-section">
+
+                                <div class="accordion-section-title" data-tab="#accordion-b1">
+                                    What time is check-in and check-out?
+                                </div>
+                                <div class="accordion-section-content" id="accordion-b1">
+                                    <p class="mb-0">
+                                        Check-in starts at 2:00 PM and check-out is at 12:00 PM. Early check-in and late
+                                        check-out are available upon request and subject to availability.
+                                    </p>
+                                </div>
+
+                                <div class="accordion-section-title" data-tab="#accordion-b2">
+                                    Do you offer airport pick-up or shuttle service?
+                                </div>
+                                <div class="accordion-section-content" id="accordion-b2">
+                                    <p class="mb-0">
+                                        Yes, we provide airport transfers and private shuttle services. Please contact
+                                        us in advance to arrange transportation.
+                                    </p>
+                                </div>
+
+                                <div class="accordion-section-title" data-tab="#accordion-b3">
+                                    Are pets allowed in the hotel?
+                                </div>
+                                <div class="accordion-section-content" id="accordion-b3">
+                                    <p class="mb-0">
+                                        We welcome small pets in designated pet-friendly rooms. Additional cleaning fees
+                                        may apply.
+                                    </p>
+                                </div>
+
+                                <div class="accordion-section-title" data-tab="#accordion-b4">
+                                    Do you have free Wi-Fi?
+                                </div>
+                                <div class="accordion-section-content" id="accordion-b4">
+                                    <p class="mb-0">
+                                        Yes, complimentary high-speed Wi-Fi is available throughout the hotel, including
+                                        rooms and public areas.
+                                    </p>
+                                </div>
+
+                                <div class="accordion-section-title" data-tab="#accordion-b5">
+                                    What facilities are available for guests?
+                                </div>
+                                <div class="accordion-section-content" id="accordion-b5">
+                                    <p class="mb-0">
+                                        Guests can enjoy our swimming pool, fitness center, spa, restaurant, lounge bar,
+                                        and business center. Facility access varies by room type.
+                                    </p>
+                                </div>
+
+                                <div class="accordion-section-title" data-tab="#accordion-b6">
+                                    Do you offer breakfast?
+                                </div>
+                                <div class="accordion-section-content" id="accordion-b6">
+                                    <p class="mb-0">
+                                        Yes, we offer daily breakfast with continental and international options.
+                                        Breakfast is included for certain room packages.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="p-0 mx-2" aria-label="section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a class="d-block hover popup-youtube overflow-hidden rounded-1"
+                            href="https://www.youtube.com/watch?v=tPz1hrTGeYk">
+                            <div class="relative overflow-hidden">
+                                <div class="absolute start-0 w-100 abs-middle fs-36 text-white text-center z-2">
+                                    <div class="player bg-color no-border circle wow scaleIn"><span></span></div>
+                                </div>
+                                <div class="absolute w-100 h-100 top-0 bg-dark hover-op-05"></div>
+                                <img src="images/background/kaduhithlu-video-banner.png" class="w-100 hover-scale-1-1" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row g-4 mb-2 justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <div class="subtitle id-color wow fadeInUp">Our Blog</div>
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s">News &amp; Articles</h2>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+
+                    <div class="col-xl-3 col-lg-6">
+                        <div class="overflow-hidden">
+                            <div class="hover relative">
+                                <div class="abs z-2 bg-blur text-white p-3 pb-2 m-4 text-center fw-600 rounded-3">
+                                    <div class="fs-36 fw-bold lh-1">20</div>
+                                    <span>Jun</span>
+                                </div>
+                                <div class="rounded-1 overflow-hidden">
+                                    <img src="images/blog/1.jpg" class="w-100 hover-scale-1-1" alt="">
+                                </div>
+                                <a href="blog-single.html" class="d-block abs w-100 h-100 top-0 start-0"></a>
+                            </div>
+
+                            <div class="pt-4 relative">
+                                <a href="blog-single.html">
+                                    <h3>Top Hotel Amenities That Guests Love in 2025 Trends</h3>
+                                </a>
+                                <p>From smart-room technology to wellness features that elevate guest comfort and
+                                    overall satisfaction.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-6">
+                        <div class="overflow-hidden">
+                            <div class="hover relative">
+                                <div class="abs z-2 bg-blur text-white p-3 pb-2 m-4 text-center fw-600 rounded-3">
+                                    <div class="fs-36 fw-bold lh-1">19</div>
+                                    <span>Jun</span>
+                                </div>
+                                <div class="rounded-1 overflow-hidden">
+                                    <img src="images/blog/2.jpg" class="w-100 hover-scale-1-1" alt="">
+                                </div>
+                                <a href="blog-single.html" class="d-block abs w-100 h-100 top-0 start-0"></a>
+                            </div>
+
+                            <div class="pt-4 relative">
+                                <a href="blog-single.html">
+                                    <h3>How to Choose the Perfect Room for Your Stay</h3>
+                                </a>
+                                <p>Learn how to choose the ideal hotel room based on comfort, layout, and travel needs
+                                    for a better stay.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-6">
+                        <div class="overflow-hidden">
+                            <div class="hover relative">
+                                <div class="abs z-2 bg-blur text-white p-3 pb-2 m-4 text-center fw-600 rounded-3">
+                                    <div class="fs-36 fw-bold lh-1">18</div>
+                                    <span>Jun</span>
+                                </div>
+                                <div class="rounded-1 overflow-hidden">
+                                    <img src="images/blog/3.jpg" class="w-100 hover-scale-1-1" alt="">
+                                </div>
+                                <a href="blog-single.html" class="d-block abs w-100 h-100 top-0 start-0"></a>
+                            </div>
+
+                            <div class="pt-4 relative">
+                                <a href="blog-single.html">
+                                    <h3>The Art of Hospitality: Behind Our Signature Services</h3>
+                                </a>
+                                <p>Discover the thoughtful services and attention to detail that define exceptional
+                                    hospitality experiences.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-6">
+                        <div class="overflow-hidden">
+                            <div class="hover relative">
+                                <div class="abs z-2 bg-blur text-white p-3 pb-2 m-4 text-center fw-600 rounded-3">
+                                    <div class="fs-36 fw-bold lh-1">17</div>
+                                    <span>Jun</span>
+                                </div>
+                                <div class="rounded-1 overflow-hidden">
+                                    <img src="images/blog/4.jpg" class="w-100 hover-scale-1-1" alt="">
+                                </div>
+                                <a href="blog-single.html" class="d-block abs w-100 h-100 top-0 start-0"></a>
+                            </div>
+
+                            <div class="pt-4 relative">
+                                <a href="blog-single.html">
+                                    <h3>Why Location Matters: Choosing a Hotel for Your Next Trip</h3>
+                                </a>
+                                <p>See how hotel location impacts convenience, accessibility, and overall travel
+                                    experience.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-light section-dark m-2 mt-0 rounded-1">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-12">
+                    <div class="d-lg-flex align-items-center justify-content-between text-center">
+                        <div>
+                            <h3 class="fs-20">Address</h3>
+                            Atthibeedu Road, Sakleshpur, <br/>Karnataka 573165
+                        </div>
+                        <div>
+                            <img src="images/logo-white.webp" class="w-150px" alt=""><br>
+                            <div class="social-icons mb-sm-20 mt-4">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+
+                        </div>
+                        <div>
+                            <h3 class="fs-20">Contact Us</h3>
+                          <a href="tel:+917676959604" class="text-light">+91 7676959604</a><br>
+                            <a href="mailto:support@kaduhithlu.com" class="text-light">support@kaduhithlu.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <a href="https://hirolainfotech.com/" class="text-light" target="_blank"
+                            rel="noopener">
+                          Copyright © 2026. All Rights Reserved. Designed by Hirola InfoTech Solutions Pvt Ltd.
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="js/vendors.js"></script>
+    <script src="js/designesia.js"></script>
+
+    <!-- swiper slider -->
+    <script src="js/swiper.js"></script>
+    <script src="js/custom-swiper-1.js"></script>
+
+    <!-- form -->
+    <script src="js/moment.js"></script>
+    <script src="js/daterangepicker.js"></script>
+    <script src="js/custom-datepicker.js"></script>
+
+
+</body>
+
+</html>
