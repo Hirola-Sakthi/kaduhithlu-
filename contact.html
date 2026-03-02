@@ -122,7 +122,7 @@
                                 <i class="abs fs-28 p-3 bg-color text-light rounded-1 icofont-location-pin"></i>
                                 <div class="ms-80px text-dark">
                                     <h3 class="fs-20 mb-0">Address</h3>
-                                   Atthibeedu Road, Sakleshpur,Karnataka 573165
+                                    Atthibeedu Road, Sakleshpur,Karnataka 573165
                                 </div>
                             </div>
 
@@ -145,7 +145,7 @@
                             <div class="col-md-6">
                                 <i class="abs fs-28 p-3 bg-color text-light rounded-1 icofont-instagram"></i>
                                 <div class="ms-80px">
-                                    <h3 class="fs-20 mb-0">Instagram</h3>                              
+                                    <h3 class="fs-20 mb-0">Instagram</h3>
                                     <a href="#" class="text-dark"> @kaduhithlu_sakleshpur</a>
                                 </div>
                             </div>
@@ -155,7 +155,7 @@
 
                     <div class="col-lg-6">
                         <div class="bg-color-op-1 rounded-1 p-40 relative">
-                            <form name="contactForm" id="contact_form" method="post" action="contact.php">
+                            <form name="contactForm" id="contact_form" method="POST" action="/contact.php">
                                 <div class="row g-4">
                                     <div class="col-md-6">
                                         <h3 class="fs-18">Name</h3>
@@ -171,7 +171,7 @@
 
                                     <div class="col-md-12">
                                         <h3 class="fs-18">Phone</h3>
-                                        <input type="text" name="phone" id="phone" class="bg-white form-control"
+                                        <input type="tel" name="phone" id="phone" class="bg-white form-control"
                                             placeholder="Your Phone" required>
                                     </div>
 
@@ -196,9 +196,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
                             </form>
                         </div>
                     </div>
@@ -215,7 +212,7 @@
                     <div class="d-lg-flex align-items-center justify-content-between text-center">
                         <div>
                             <h3 class="fs-20">Address</h3>
-                            Atthibeedu Road, Sakleshpur, <br/>Karnataka 573165
+                            Atthibeedu Road, Sakleshpur, <br />Karnataka 573165
                         </div>
                         <div>
                             <img src="images/logo-white.webp" class="w-150px" alt=""><br>
@@ -229,7 +226,7 @@
                         </div>
                         <div>
                             <h3 class="fs-20">Contact Us</h3>
-                          <a href="tel:+917676959604" class="text-light">+91 7676959604</a><br>
+                            <a href="tel:+917676959604" class="text-light">+91 7676959604</a><br>
                             <a href="mailto:support@kaduhithlu.com" class="text-light">support@kaduhithlu.com</a>
                         </div>
                     </div>
@@ -240,9 +237,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <a href="https://hirolainfotech.com/" class="text-light" target="_blank"
-                            rel="noopener">
-                          Copyright © 2026. All Rights Reserved. Designed by Hirola InfoTech Solutions Pvt Ltd.
+                        <a href="https://hirolainfotech.com/" class="text-light" target="_blank" rel="noopener">
+                            Copyright © 2026. All Rights Reserved. Designed by Hirola InfoTech Solutions Pvt Ltd.
                         </a>
                     </div>
                 </div>
@@ -260,8 +256,62 @@
     <script src="js/custom-swiper-1.js"></script>
 
     <!-- form -->
-    <script src="js/validation-contact.js"></script>
+    <!-- <script src="js/validation-contact.js"></script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.getElementById("contact_form");
 
+            // Handle form submission
+            if (form) {
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    const submitButton = form.querySelector('input[type="submit"]');
+                    submitButton.value  = "Sending...";
+                    submitButton.disabled = true;
+
+                    const formData = new FormData(form);
+
+                    fetch(form.action, {
+                        method: "POST",
+                        body: formData,
+                    })
+                        .then((response) => response.text())
+                        .then((text) => {
+                            console.log("Raw response:", text);
+                            let data = {};
+                            try {
+                                data = JSON.parse(text);
+                            } catch (e) {
+                                alert("Invalid JSON response from server");
+                                throw e;
+                            }
+                            if (data.status === "success") {
+                                alert("Form submitted successfully!");
+                                form.reset();
+                            } else {
+                                if (data.errors) {
+                                    if (data.errors.tel) alert(data.errors.tel);
+                                    if (data.errors.name) alert(data.errors.name);
+                                } else {
+                                    alert(data.message || "An error occurred");
+                                    form.reset();
+                                }
+                            }
+                        })
+                        .catch((error) => {
+                            console.error("Error:", error);
+                            alert("Failed to submit the form. Please try again.");
+                            form.reset();
+                        })
+                        .finally(() => {
+                            submitButton.value  = "Send Message";
+                            submitButton.disabled = false;
+                        });
+                });
+            }
+        });
+    </script>
 
 </body>
 

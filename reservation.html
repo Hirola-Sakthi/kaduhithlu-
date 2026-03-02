@@ -119,13 +119,13 @@
                         </div>
 
                         <div id="booking_form_wrap">
-                            <form name="contactForm" id='booking_form' class="form-border" method="post"
-                                action="booking.php">
+                            <form name="contactForm" id='booking_form' class="form-border" method="POST"
+                                action="/booking.php">
 
                                 <div class="row g-4 mb-4">
                                     <div class="col-md-12">
                                         <h4>Choose Date</h4>
-                                        <input type="text" id="date-picker" class="form-control" name="date" value="">
+                                        <input type="text" id="date-picker" class="form-control" name="date" value="" required>
                                     </div>
 
                                     <div class="col-md-4">
@@ -133,7 +133,7 @@
                                             <h4>Adult</h4>
                                             <div class="de-number">
                                                 <span class="d-minus">-</span>
-                                                <input type="text" class="no-border no-bg" value="1" name="adult">
+                                                <input type="text" class="no-border no-bg" value="1" name="adult" required>
                                                 <span class="d-plus">+</span>
                                             </div>
                                         </div>
@@ -143,7 +143,7 @@
                                             <h4>Children</h4>
                                             <div class="de-number">
                                                 <span class="d-minus">-</span>
-                                                <input type="text" class="no-border no-bg" value="0" name="children">
+                                                <input type="text" class="no-border no-bg" value="0" name="children" required>
                                                 <span class="d-plus">+</span>
                                             </div>
                                         </div>
@@ -153,7 +153,7 @@
                                             <h4>Room</h4>
                                             <div id="d-room-count" class="de-number">
                                                 <span class="d-minus">-</span>
-                                                <input id="room-count" type="text" class="no-border no-bg" value="1"
+                                                <input id="room-count" type="text" class="no-border no-bg" value="1" required
                                                     name="room_count">
                                                 <span class="d-plus">+</span>
                                             </div>
@@ -164,7 +164,7 @@
                                 <div class="select-room mb-4">
                                     <h4>Select Room</h4>
 
-                                    <select class="room-type form-control" name="room_type">
+                                    <select class="room-type form-control" name="room_type" required>
                                         <option value='Standart Room' data-src="images/form/1.jpg">
                                             Standart Room | $119/night | 2 Guests
                                         </option>
@@ -208,7 +208,7 @@
 
 
                                     <div class="col-md-6">
-                                        <textarea name='message' id='message' rows="7" class="form-control"
+                                        <textarea name='message' id='message' rows="7" class="form-control" required
                                             placeholder="Your Message"></textarea>
                                     </div>
 
@@ -295,9 +295,63 @@
 
     <!-- form -->
     <script src="js/custom-datepicker-in-out.js"></script>
-    <script src="js/validation-reservation.js"></script>
+    <!-- <script src="js/validation-reservation.js"></script> -->
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.getElementById("booking_form");
 
+            // Handle form submission
+            if (form) {
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    const submitButton = form.querySelector('input[type="submit"]');
+                    submitButton.value  = "submitting...";
+                    submitButton.disabled = true;
+
+                    const formData = new FormData(form);
+
+                    fetch(form.action, {
+                        method: "POST",
+                        body: formData,
+                    })
+                        .then((response) => response.text())
+                        .then((text) => {
+                            console.log("Raw response:", text);
+                            let data = {};
+                            try {
+                                data = JSON.parse(text);
+                            } catch (e) {
+                                alert("Invalid JSON response from server");
+                                throw e;
+                            }
+                            if (data.status === "success") {
+                                alert("Form submitted successfully!");
+                                form.reset();
+                            } else {
+                                if (data.errors) {
+                                    if (data.errors.tel) alert(data.errors.tel);
+                                    if (data.errors.name) alert(data.errors.name);
+                                } else {
+                                    alert(data.message || "An error occurred");
+                                    form.reset();
+                                }
+                            }
+                        })
+                        .catch((error) => {
+                            console.error("Error:", error);
+                            alert("Failed to submit the form. Please try again.");
+                            form.reset();
+                        })
+                        .finally(() => {
+                            submitButton.value  = "Submit Form";
+                            submitButton.disabled = false;
+                        });
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
