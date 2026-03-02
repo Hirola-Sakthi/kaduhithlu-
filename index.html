@@ -1061,12 +1061,12 @@
             }
             clearTimeout(modalTimer);
             if (localStorage.getItem("modalFormSubmitted") !== "true") {
-                modalTimer = setTimeout(openModal, 30000);
+                modalTimer = setTimeout(openModal, 300000);
             }
         }
         window.onload = function () {
             if (localStorage.getItem("modalFormSubmitted") === "true") return;
-            modalTimer = setTimeout(openModal, 30000);
+            modalTimer = setTimeout(openModal, 300000);
         };
     </script>
 

@@ -146,7 +146,8 @@
                                 <i class="abs fs-28 p-3 bg-color text-light rounded-1 icofont-instagram"></i>
                                 <div class="ms-80px">
                                     <h3 class="fs-20 mb-0">Instagram</h3>
-                                    <a href="#" class="text-dark"> @kaduhithlu_sakleshpur</a>
+                                    <a href="https://www.instagram.com/thekaduhithlu/?hl=en" target="_blank"
+                                        class="text-dark">@thekaduhithlu</a>
                                 </div>
                             </div>
                         </div>
@@ -207,6 +208,20 @@
 
     <footer class="text-light section-dark m-2 mt-0 rounded-1">
         <div class="container">
+            <div>
+                <a href="tel:+917676959604">
+                    <button class="btn-floating phone">
+                        <img src="/images/background/call-icon.png" width="30" height="30" alt="Phone" />
+                        <span>Call us</span>
+                    </button>
+                </a>
+                <a href="https://wa.me/917676959604" target="_blank">
+                    <button class="btn-floating whatsapp">
+                        <img src="/images/background/whatsapp-icon.png" width="30" height="30" alt="WhatsApp" />
+                        <span>Chat</span>
+                    </button>
+                </a>
+            </div>
             <div class="row g-4 align-items-center">
                 <div class="col-md-12">
                     <div class="d-lg-flex align-items-center justify-content-between text-center">
@@ -267,7 +282,7 @@
                     event.preventDefault();
 
                     const submitButton = form.querySelector('input[type="submit"]');
-                    submitButton.value  = "Sending...";
+                    submitButton.value = "Sending...";
                     submitButton.disabled = true;
 
                     const formData = new FormData(form);
@@ -305,7 +320,7 @@
                             form.reset();
                         })
                         .finally(() => {
-                            submitButton.value  = "Send Message";
+                            submitButton.value = "Send Message";
                             submitButton.disabled = false;
                         });
                 });
