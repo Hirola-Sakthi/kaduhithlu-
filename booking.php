@@ -31,16 +31,36 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$Adult = (int)($_POST['adult'] ?? 0);
 	$Children = (int)($_POST['children'] ?? 0);
 	$RoomCount = (int)($_POST['room_count'] ?? 0);
-	$RoomType = trim(mysqli_real_escape_string($con, $_POST['room_type'] ?? ''));
-	$RoomTypeList = '';
+	$RoomTypes = [];
 
-if ($RoomCount > 1 && !empty($RoomType)) {
-    for ($i = 1; $i <= $RoomCount; $i++) {
-        $RoomTypeList .= "Room $i: $RoomType<br>";
-    }
-} else {
-    $RoomTypeList = $RoomType;
-}
+	// Loop through all room_type fields dynamically
+	foreach ($_POST as $key => $value) {
+		if (str_starts_with($key, 'room_type')) {
+			// If somehow $value is an array, take first element or join it
+			if (is_array($value)) {
+				$value = implode(', ', $value);
+			}
+			$RoomTypes[] = trim($value);
+		}
+	}
+	$RoomTypeList = '';
+	$uniqueRooms = array_unique($RoomTypes);
+
+	if (count($uniqueRooms) === count($RoomTypes)) {
+		// All rooms are different → show per room
+		foreach ($RoomTypes as $i => $type) {
+			$roomNo = $i + 1;
+			$cleanType = mysqli_real_escape_string($con, $type);
+			$RoomTypeList .= "Room $roomNo: $cleanType<br>";
+		}
+	} else {
+		// Some rooms are repeated → group by type
+		$roomCounts = array_count_values($RoomTypes); // count duplicates
+		foreach ($roomCounts as $type => $count) {
+			$RoomTypeList .= $count === 1 ? "$type: 1 room<br>" : "$type: $count rooms<br>";
+		}
+	}
+
 	$Name = trim(mysqli_real_escape_string($con, $_POST['name'] ?? ''));
 	$Email = trim(mysqli_real_escape_string($con, $_POST['email'] ?? ''));
 	$Phonenumber = trim(mysqli_real_escape_string($con, $_POST['phone'] ?? ''));
@@ -63,17 +83,10 @@ if ($RoomCount > 1 && !empty($RoomType)) {
 		$error_msg .= '*Booking date is required* ';
 	}
 
-	if ($Adult <= 0) {
-		$error_msg .= '*At least 1 adult is required* ';
-	}
+	if ($Adult <= 0) $error_msg .= '*At least 1 adult is required* ';
+	if ($RoomCount <= 0) $error_msg .= '*At least 1 room is required* ';
+	if (empty($RoomTypes)) $error_msg .= '*Room type is required* ';
 
-	if ($RoomCount <= 0) {
-		$error_msg .= '*At least 1 room is required* ';
-	}
-
-	if (empty($RoomType)) {
-		$error_msg .= '*Room type is required* ';
-	}
 
 	$cleanedPhone = preg_replace('/[^0-9]/', '', $Phonenumber);
 	if (strlen($cleanedPhone) < 10 || strlen($cleanedPhone) > 15) {
@@ -96,53 +109,51 @@ if ($RoomCount > 1 && !empty($RoomType)) {
 
 	if (empty($error_msg) && empty($phone_err)) {
 		$html = "
-    <strong>Booking Details</strong><br><br>
+		<strong>Booking Details</strong><br><br>
 
-    <strong>Booking Date:</strong> $BookingDate <br>
-    <strong>Adults:</strong> $Adult <br>
-    <strong>Children:</strong> $Children <br>
-    <strong>Rooms:</strong> $RoomCount <br>
-    <strong>Room Types:</strong><br> $RoomTypeList <br><br>
+		<strong>Booking Date:</strong> $BookingDate <br>
+		<strong>Adults:</strong> $Adult <br>
+		<strong>Children:</strong> $Children <br>
+		<strong>Rooms:</strong> $RoomCount <br>
+		<strong>Room Types:</strong><br> $RoomTypeList <br><br>
 
-    <strong>Customer Details</strong><br><br>
+		<strong>Customer Details</strong><br><br>
 
-    <strong>Name:</strong> $Name <br>
-    <strong>Phone Number:</strong> $Phonenumber <br>
-    <strong>Email:</strong> $Email <br><br>
+		<strong>Name:</strong> $Name <br>
+		<strong>Phone Number:</strong> $Phonenumber <br>
+		<strong>Email:</strong> $Email <br><br>
 
-    <strong>Message:</strong><br>
-    $Message <br>
-";
+		<strong>Message:</strong><br>
+		$Message <br>
+	";
 
-$RoomTypeDB = mysqli_real_escape_string(
-    $con,
-    strip_tags(str_replace('<br>', ', ', $RoomTypeList))
-);
+		$RoomTypeDB = mysqli_real_escape_string($con, strip_tags(str_replace('<br>', ', ', $RoomTypeList)));
 
-$query = "INSERT INTO kaduhithlu_reservation_forms 
-(
-    BookingDate,
-    Adult,
-    Children,
-    RoomCount,
-    RoomType,
-    Name,
-    PhoneNumber,
-    Email,
-    Message
-)
-VALUES
-(
-    '$BookingDate',
-    '$Adult',
-    '$Children',
-    '$RoomCount',
-    '$RoomTypeDB',
-    '$Name',
-    '$Phonenumber',
-    '$Email',
-    '$Message'
-)";
+
+		$query = "INSERT INTO kaduhithlu_reservation_forms 
+	(
+		BookingDate,
+		Adult,
+		Children,
+		RoomCount,
+		RoomType,
+		Name,
+		PhoneNumber,
+		Email,
+		Message
+	)
+	VALUES
+	(
+		'$BookingDate',
+		'$Adult',
+		'$Children',
+		'$RoomCount',
+		'$RoomTypeDB',
+		'$Name',
+		'$Phonenumber',
+		'$Email',
+		'$Message'
+	)";
 
 		if (mysqli_query($con, $query)) {
 			mysqli_close($con);
