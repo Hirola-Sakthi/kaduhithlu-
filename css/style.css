@@ -1150,7 +1150,9 @@ header.header-mobile.header-center #logo-center{
 
 /* =============== section =============== */
 section {
-  padding: 100px 0 100px 0;
+  /* padding: 100px 0 100px 0; */
+  padding: 50px 0 50px 0;
+
 }
 
 #content.zebra section:nth-child(even) {
@@ -12318,4 +12320,347 @@ img {
   padding: 12px 20px; 
   border-radius: 8px; 
   border: 1px solid #ccc; 
+}
+
+
+/* .hero-carousel {
+  position: relative;
+  height: 100vh; 
+  width: 100%;
+  background-image: url('../images/background/kaduhithlu-slider-img.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+} */
+
+/* .hero-overlay {
+  background: rgba(0, 0, 0, 0.4); 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* .mini-title {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.cta-button {
+  padding: 15px 35px;
+  font-size: 1rem;
+  background-color: #ff4757;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+} */
+
+
+
+
+
+/*summer vacation tours starts here */
+.kaduhithlu-tours-parent {
+  background: linear-gradient(rgb(0 0 0 / 77%), rgb(0 0 0 / 35%)),
+    url(../images/background/kaduhithlu-slider-img.jpg);
+}
+
+.kaduhithlu-tours-parent.kaduhithlu-travelagencybg-2 {
+  background: linear-gradient(rgb(0 0 0 / 77%), rgb(0 0 0 / 35%)),
+    url(../images/background/kaduhithlu-about-testimonial-parallex.webp);
+}
+
+.kaduhithlu-tours-parent.kaduhithlu-travelagencybg-3 {
+  background: linear-gradient(rgb(0 0 0 / 77%), rgb(0 0 0 / 35%)),
+    url(../images/background/kaduhithlu-offer-banner.webp);
+}
+
+.kaduhithlu-tours-parent,
+.kaduhithlu-tours-parent.kaduhithlu-travelagencybg-2,
+.kaduhithlu-tours-parent.kaduhithlu-travelagencybg-3 {
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 15px;
+}
+
+.kaduhithlu-tours-sub {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.kaduhithlu-tours-sub h2 {
+  color: #fff;
+  width: 50%;
+  text-align: center;
+  font-size: 48px;
+}
+
+.kaduhithlu-tours-sub button {
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 6px 20px;
+  color: #fff;
+  margin-top: 0px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.kaduhithlu-tours-sub p {
+  font-size: 19px;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+
+  .kaduhithlu-tours-sub h2 {
+    width: 70%;
+    font-size: 36px;
+  }
+
+  .kaduhithlu-tours-sub p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .kaduhithlu-tours-sub h2 {
+    width: 100%;
+    font-size: 26px;
+  }
+
+  .kaduhithlu-tours-sub p {
+    font-size: 15px;
+  }
+
+  .kaduhithlu-tours-sub button {
+    font-size: 12px;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kaduhithlu-tours-sub h2 {
+    font-size: 22px;
+  }
+
+  .kaduhithlu-tours-sub p {
+    font-size: 14px;
+  }
+}
+
+  /* amenities styles */
+.amenities-section {
+  padding: 70px 20px;
+  background-color: #f6f6f6;
+  margin-bottom: 30px;
+
+}
+.container {
+  /* max-width: 1200px; */
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.amenity-feature {
+  text-align: center;
+}
+
+.icon-circle {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-circle i {
+  font-size: 30px;
+  color: #000; 
+}
+
+.amenity-feature h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.amenity-feature p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 260px;
+  margin: auto;
+}
+
+@media (max-width: 992px) {
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+  /* day afternoon eveing section styles */
+
+.day-kaduhithlu {
+  padding: 50px 0;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.day-card-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.day-card {
+  background: #fff;
+  padding: 40px 25px;
+  max-width: 320px;
+  border-radius: 14px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.day-icon-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+
+.day-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.day-desc {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+  /* why choose us section styles */
+
+
+.why-choose-resort {
+  padding: 80px 0;
+  background: #f8f8f8;
+}
+
+.why-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.why-content {
+  padding-left: 30px;
+}
+
+.why-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.why-desc {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.why-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.why-list li {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .why-content {
+    padding-left: 0;
+    margin-top: 30px;
+  }
+
+  .why-content h2 {
+    font-size: 28px;
+  }
 }
