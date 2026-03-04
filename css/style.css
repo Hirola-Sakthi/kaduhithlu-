@@ -12657,3 +12657,30 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     font-size: 28px;
   }
 }
+
+@media(max-width:540px){
+  .testimonial-small{
+  font-size: 20px;
+  }
+  .player span{
+  top: 27.5%;
+    left: 40%;
+  }
+  .player{
+    width: 60px;
+    height: 60px;
+  }
+  .banner-title{
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-md-6 {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+  .facilities-img{
+    display: none !important;
+  }
+}
