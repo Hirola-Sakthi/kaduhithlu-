@@ -12385,16 +12385,19 @@ img {
 .kaduhithlu-tours-parent {
   background: linear-gradient(rgb(0 0 0 / 77%), rgb(0 0 0 / 35%)),
     url(../images/background/kaduhithlu-slider-img.jpg);
+  border-radius: 30px;
 }
 
 .kaduhithlu-tours-parent.kaduhithlu-travelagencybg-2 {
   background: linear-gradient(rgb(0 0 0 / 77%), rgb(0 0 0 / 35%)),
     url(../images/background/kaduhithlu-about-testimonial-parallex.webp);
+  border-radius: 30px;
 }
 
 .kaduhithlu-tours-parent.kaduhithlu-travelagencybg-3 {
   background: linear-gradient(rgb(0 0 0 / 77%), rgb(0 0 0 / 35%)),
     url(../images/background/kaduhithlu-offer-banner.webp);
+  border-radius: 30px;
 }
 
 .kaduhithlu-tours-parent,
@@ -12405,6 +12408,8 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 15px;
+  object-fit: cover;
+  border-radius: 30px;
 }
 
 .kaduhithlu-tours-sub {
@@ -12450,6 +12455,11 @@ img {
 }
 
 @media (max-width: 767px) {
+.kaduhithlu-tours-parent,
+.kaduhithlu-tours-parent.kaduhithlu-travelagencybg-2,
+.kaduhithlu-tours-parent.kaduhithlu-travelagencybg-3 {
+  height: 400px;
+}
 
   .kaduhithlu-tours-sub h2 {
     width: 100%;
@@ -12661,6 +12671,9 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 @media(max-width:540px){
   .testimonial-small{
   font-size: 20px;
+  }
+  .testimonial-title{
+    font-size: 50px;
   }
   .player span{
   top: 27.5%;
