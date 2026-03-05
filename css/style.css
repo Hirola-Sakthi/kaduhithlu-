@@ -12156,7 +12156,14 @@ img {
     background-color: #1f7a12
 }
 
-
+@media(max-width:768px){
+  .btn-floating.whatsapp{
+    bottom: 30px; 
+  }
+  .btn-floating.phone{
+    bottom: 90px;
+  }
+}
 
 
 /* pop up modal styles*/
@@ -12478,7 +12485,7 @@ img {
 
 @media (max-width: 480px) {
   .kaduhithlu-tours-sub h2 {
-    font-size: 22px;
+    font-size: 28px;
   }
 
   .kaduhithlu-tours-sub p {
